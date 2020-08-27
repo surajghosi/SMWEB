@@ -1,0 +1,47 @@
+﻿<div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h2 class="card-title text-center">Register</h2>
+    
+    <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !FullName.valid }">
+            <label for="FullName">Full Name</label>
+            <input type="text" class="form-control" name="FullName" [(ngModel)]="model.FullName" #FullName="ngModel" required />
+            <div *ngIf="f.submitted && !FullName.valid" class="help-block">Full Name is required</div>
+        </div>
+        
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !EmailAddress.valid }">
+            <label for="EmailAddress">Email ID</label>
+            <input type="text" class="form-control" name="EmailAddress" [(ngModel)]="model.EmailAddress" #EmailAddress="ngModel" required email />
+            <div *ngIf="f.submitted && !EmailAddress.valid" class="help-block">
+                <div *ngIf="EmailAddress.errors.required" >Email is required</div>
+                <div *ngIf="EmailAddress.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !Password.valid }">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" name="Password" [(ngModel)]="model.Password" #Password="ngModel" required />
+            <div *ngIf="f.submitted && !Password.valid" class="help-block">Password is required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !OrgName.valid }">
+            <label for="OrgName">Orgnaization Name</label>
+            <input type="text" class="form-control" name="OrgName" [(ngModel)]="model.OrgName" #OrgName="ngModel" required />
+            <div *ngIf="f.submitted && !OrgName.valid" class="help-block">Orgnaization Name is required</div>
+        </div>
+        
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Let's Start
+                </button>
+          
+            <a [routerLink]="['/login']" class="btn btn-primary pull-right">Back to login</a>
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    

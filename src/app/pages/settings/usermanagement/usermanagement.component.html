@@ -1,0 +1,75 @@
+<form (ngSubmit)="f.valid && register(f)" #f="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !emailAddress.valid }">
+      <label for="emailAddress">Username (Email Address)</label>
+      <input type="text" class="form-control" [disabled]="model.userId" name="emailAddress" [(ngModel)]="model.emailAddress" #emailAddress="ngModel" required />
+      <div *ngIf="f.submitted && !emailAddress.valid && !model.userId" class="help-block">Username is required</div>
+    </div>
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+      <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+   </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !fullName.valid }">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" name="fullName" [(ngModel)]="model.fullName" #fullName="ngModel" required />
+      <div *ngIf="f.submitted && !fullName.valid" class="help-block">Full Name is required</div>
+    </div>
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !role.valid }">
+      <label for="inputEmail4">Role</label>
+      <select id="ddlrole"  [(ngModel)]="model.role" name="role" #role="ngModel" class="form-control" required>
+        <option value=""> Please choose one </option>
+        <option *ngFor="let item of userRoleData" [value]="item.roleId">{{item?.roleName}}</option>
+      </select>
+      <div *ngIf="f.submitted && !role.valid" class="help-block">Select role</div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-2">
+      <button [disabled]="isSaving" class="btn btn-primary">
+        <span *ngIf="isSaving" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Submit
+        </button>
+    </div>
+    <div class="col-1">
+      <input type="reset" (click)="Reset()" class="btn btn-primary" value="Reset">
+    </div>
+  </div>
+  
+    
+  
+</form>
+<div class="table-responsive">
+<table class="table  table-bordered mttable" *blockUI="'contact-list'">
+  <thead>
+    <tr >
+      <th scope="col">SN</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col" colspan="2"></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of pageOfItems; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{item?.name}}</td>
+      <td>{{item?.email}}</td>
+      <td>{{item?.roleName}}</td>
+      <td><i class="fa fa-pencil" style="cursor: pointer;" (click)="EditUser(item)" aria-hidden="true"></i></td>
+      <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i>
+        
+      </td>
+    </tr> 
+  
+  </tbody>
+</table>
+
+  <jw-pagination class="pull-right" [items]="allUser" (changePage)="onChangePage($event)"></jw-pagination>
+</div>

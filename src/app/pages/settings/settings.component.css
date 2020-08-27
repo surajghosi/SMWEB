@@ -1,0 +1,17 @@
+.customnav {
+    background: gray;
+    border:2px solid #4680FF;
+}
+.customwidth {
+    padding-right: 0px;
+    border-right: 3px solid #4680FF;
+}
+.customRight {
+    border:2px solid #4680FF;
+ 
+    background: white;
+}
+#v-pills-tabContent {
+    padding: 10px 10px 10px 10px;
+    background: white;
+}

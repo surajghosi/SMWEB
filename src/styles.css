@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/cdk/overlay-prebuilt.css";
+:root {
+    --first-color: #4680FF;
+    --second-color: #ffff8c;
+    --deleteColor: red;
+  } 
+.toast-container .ngx-toastr
+{
+    width: auto !important;
+}
+a{
+    color:white ;
+}
+a:hover{
+    color:white
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+    background: var(--first-color) ;
+}
+.mttable
+{
+    margin-top:10px;
+}
+.page-item.active .page-link
+{
+    background-color: var(--first-color);
+     border-color: var(--first-color); 
+}
+.fa-trash-o
+{
+    color:var(--deleteColor) !important;
+}
+.fa {
+    color:var(--first-color);
+}
+.page-link:hover
+{
+    background-color :var(--first-color);
+    border-color : var(--first-color);
+}

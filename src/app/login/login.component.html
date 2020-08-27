@@ -1,0 +1,49 @@
+﻿
+<div class="container">
+<!--   <sh-context-menu #menu>
+  <ng-template shContextMenuItem let-data (click)="onClick($event)">
+    <div>
+      <button >click here</button>
+    </div>
+  </ng-template>
+</sh-context-menu>
+<div [shAttachMenu]="menu">Right Click Me</div> -->
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+           
+            <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !userName.valid }">
+                    <label for="userName">userName</label>
+                    <input type="text" class="form-control" name="userName" [(ngModel)]="model.userName" #userName="ngModel" required />
+                    <div *ngIf="f.submitted && !userName.valid" class="help-block">userName is required</div>
+                </div>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                    <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                </div>
+                <div class="form-group">
+                    <button [disabled]="loading" class="btn btn-primary">
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Login
+                      </button>
+                    
+                  
+                </div>
+                <hr class="my-4">
+                <a [routerLink]="['/register']" class="btn btn-lg btn-primary   btn-block text-uppercase" > Sign up here</a>
+                <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fa fa-google mr-2"></i> Sign in with Google</button> -->
+                <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fa fa-google mr-2"></i> Sign in with Google</button>
+                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fa fa-facebook-f mr-2"></i> Sign in with Facebook</button> -->
+                <!-- <div class="form-group">
+                    <p class="text-center">Don't have account? <a [routerLink]="['/register']" class="btn btn-primary pull-right" > Sign up here</a></p>
+                 </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
