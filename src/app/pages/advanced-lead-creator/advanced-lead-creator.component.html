@@ -1,0 +1,203 @@
+
+<div class="card">
+  <div class="card-header">
+    Advanced Lead Creator <p class="pull-right" style="color:#d04949;font-weight:bold">*You need to create lead then you can add other details</p>
+  </div>
+  <div class="card-body popup-modal">
+    <ul class="nav nav-tabs">
+      <li class="nav-item nav-tab-links">
+        <a class="nav-link active" data-toggle="tab" href="#leadinfo"><i class="fa fa-exchange mr-1" aria-hidden="true"></i>Lead Info</a>
+      </li>
+      <li class="nav-item nav-tab-links"> 
+        <a class="nav-link" data-toggle="tab" href="#todos"><i class="fa fa-tasks mr-1" aria-hidden="true"></i>Todos</a>
+        <span *ngIf="todoCount >0" style="background-color: #4680FF ;">{{todoCount}}</span>
+      </li>
+      <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#contacts"><i class="fa fa-user mr-1" aria-hidden="true"></i>Contacts</a>
+          <span *ngIf="contactCount >0" style="background-color: #4680FF ;">{{contactCount}}</span>
+        </li>
+        <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#notes"><i class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Notes</a>
+          <span *ngIf="notesCount >0" style="background-color: #4680FF ;">{{notesCount}}</span>
+
+        </li>
+        <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#files"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Files</a>
+          <span *ngIf="fileCount >0" style="background-color: #4680FF ;">{{fileCount}}</span>
+        </li>
+        <!-- <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#fields"><i class="fa fa-book mr-1" aria-hidden="true"></i>Fields</a>
+        </li> -->
+        <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#products"><i class="fa fa-briefcase mr-1" aria-hidden="true"></i>Products</a>
+          <span *ngIf="productCount >0" style="background-color: #4680FF ;">{{productCount}}</span>
+        </li>
+        <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#sources"><i class="fa fa-soundcloud mr-1" aria-hidden="true"></i>Sources</a>
+          
+        </li>
+        <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#zones"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Zones</a>
+        </li>
+        <li class="nav-item nav-tab-links">
+          <a class="nav-link" data-toggle="tab" href="#manageaccess"><i class="fa fa-key mr-1" aria-hidden="true"></i>Manage Access</a>
+        </li>
+    </ul>
+     <div id="myTabContent" class="tab-content pt-3">
+      <div class="tab-pane active fade show" id="leadinfo">
+        
+              <form (ngSubmit)="f.valid && submitLead(f,f.submitted)" #f="ngForm" novalidate>
+                  <div class="form-row">
+                      <!-- <div class="form-group col-md-6">
+                        <label for="leadinfo">Lead Info</label>
+                        <input type="email" class="form-control" id="leadinfo" placeholder="Give your Lead a title">
+                      </div> -->
+                      <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !leadName.valid }">
+                        <label for="txtLeadname">Lead Name</label>
+                        <input type="text" class="form-control" name="leadName" id="txtLeadname" placeholder="Lead Name" [(ngModel)]="model.leadName" #leadName="ngModel" required>
+                        <div *ngIf="f.submitted && !leadName.valid" class="help-block">Lead Name is required</div>
+                      </div>
+                     
+                      <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !leadValue.valid }">
+                        <label for="txtLeadValue">Lead Value</label>
+                        <input type="text" class="form-control" name="leadValue" (keypress)="numberOnly($event)" id="txtLeadValue" placeholder="Lead Value" [(ngModel)]="model.leadValue" #leadValue="ngModel" required>
+                        <div *ngIf="f.submitted && !leadValue.valid" class="help-block">lead value is required</div>
+                      </div>
+                      
+                       
+                        <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !pipeId.valid }">
+                          <label for="inputEmail4">Pipline</label>
+                          <select id="ddlpipeline"  [(ngModel)]="model.pipeId" (change)="changePipeLine($event)" name="pipeId" #pipeId="ngModel" class="form-control" required>
+                            <option value=""> Please choose one </option>
+                            <option *ngFor="let item of allPipeLine" [value]="item.pipeID">{{item?.pipeName}}</option>
+                          </select>
+                          <div *ngIf="f.submitted && !pipeId.valid" class="help-block">Select Pipline</div>
+                          
+                        </div>
+
+                       
+                        <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !stageId.valid }">
+                          <label for="inputEmail4">Stage</label>
+                          <select id="ddlstage"  [(ngModel)]="model.stageId" name="stageId" #stageId="ngModel" class="form-control" required>
+                            <option value=""> Please choose one </option>
+                            <option *ngFor="let item of allStage" [value]="item.stageId">{{item?.stageName}}</option>
+                          </select>
+                          <div *ngIf="f.submitted && !stageId.valid" class="help-block">Select Stage</div>
+                          
+                        </div>
+                        <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !assignUser.valid }">
+                          <label for="inputEmail4">Assign To</label>
+                          <select id="ddlassignuser"  [(ngModel)]="model.assignUser" name="assignUser" #assignUser="ngModel" class="form-control" required>
+                            <option value=""> Please choose one </option>
+                            <option *ngFor="let item of allUser" [value]="item.userId">{{item?.name}}</option>
+                          </select>
+                          <div *ngIf="f.submitted && !assignUser.valid" class="help-block">Select User</div>
+                          
+                        </div>
+                        <div class="col-md-6"></div>
+                
+      </div>
+      <div class="row">
+        <div class="col-1" *ngIf="!parentLeadId">
+          <button [disabled]="isSaving" class="btn btn-primary">
+            <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+                Submit
+            </button>
+        </div>
+        <div class="col-1" *ngIf="!parentLeadId">
+          <input type="reset" (click)="Reset()"  class="btn btn-primary" value="Reset">
+        </div>
+        <div class="col-1" *ngIf="parentLeadId">
+          <input type="reset" (click)="addNewLead(f)"  class="btn btn-primary" value="Add New Lead">
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Create Lead</button>
+    </div> -->
+    </form>
+    
+      </div>
+      <div class="tab-pane fade " id="todos">
+          <app-todo (todoCount)="getCount($event)" [leadId]=parentLeadId></app-todo>
+      </div>
+      
+      <div class="tab-pane fade" id="contacts">
+        <app-contact (contactCount)="getContactCount($event)" [leadId]=parentLeadId></app-contact>
+        
+      </div>
+      
+      <div class="tab-pane fade"  id="notes">
+          <app-notes (notesCount)="getNotesCount($event)" [leadId]=parentLeadId></app-notes>
+      </div>
+      <div class="tab-pane fade" id="files">
+          <app-files (fileCount)="getfileCount($event)" [leadId]=parentLeadId></app-files>
+      </div>
+
+      <div class="tab-pane fade" id="fields">
+          <form class="clearfix">  
+              <div class="form-group">
+                      <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="fieldname">Field Name</label>
+                            <input type="text" class="form-control" id="fieldname" placeholder="Field Name">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="fieldvalue">Field Value</label>
+                              <input type="text" class="form-control" id="fieldvalue" placeholder="Field Value">
+                            </div>
+                          </div>
+                          <button class="btn btn-primary float-right">Add Field</button>
+              </div>
+           </form>
+          <div class="col-md-12 mt-2 p-0">
+                          <table class="table table-border table-hover">
+                              <thead>
+                                  <tr>
+                                    <th scope="col">Field Name</th>
+                                    <th scope="col">Field Value</th>
+                                    <th scope="col">Delete</th>
+                                  </tr>
+                                </thead>
+                              <tbody>
+                                <tr class="table-active">
+                                  <td>Column content</td>
+                                  <td>Column content</td>
+                                  <td><i class="fa fa-trash pointer" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr class="">
+                                  <td>Column content</td>
+                                  <td>Column content</td>
+                                  <td><i class="fa fa-trash pointer" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr class="table-active">
+                                  <td>Column content</td>
+                                  <td>Column content</td>
+                                  <td><i class="fa fa-trash pointer" aria-hidden="true"></i></td>
+                                </tr>
+                                </tbody>
+                                </table>
+          </div>
+       </div>
+       <div class="tab-pane fade" id="products">
+         <app-product (productCount)="getProductCount($event)" [leadId]=parentLeadId></app-product>
+
+      </div>
+      <div class="tab-pane fade" id="sources">
+         <app-source  [leadId]=parentLeadId></app-source>
+      </div>
+      <div class="tab-pane fade" id="zones"> 
+        <app-zones  [leadId]=parentLeadId></app-zones>
+      </div>
+      <div class="tab-pane fade" id="manageaccess">
+        <app-manage-access  [leadId]=parentLeadId></app-manage-access>
+      </div>
+    </div>
+        
+    <!-- <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+
+

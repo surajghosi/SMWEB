@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';  
+import { Injectable } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs/Subject';
@@ -14,7 +14,7 @@ import { Subject } from 'rxjs/Subject';
             type: 'confirm',
             text: message,
             siFn() {
-                    that.subject.next(); //this will close the modal  
+                    that.subject.next();
                     siFn();
                 },
             noFn() {

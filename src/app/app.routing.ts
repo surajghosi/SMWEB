@@ -4,7 +4,9 @@
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { AuthGuard } from './_guards/index';
-import { HomeComponent , SettingsComponent ,DashboardComponent } from './pages/index';
+import { HomeComponent , SettingsComponent , DashboardComponent ,
+         AdvancedLeadCreatorComponent, HelpCenterComponent, ChangePasswordComponent ,
+        LeadDetailsComponent } from './pages/index';
 
 
 const appRoutes: Routes = [
@@ -12,6 +14,10 @@ const appRoutes: Routes = [
         children: [
         { path: 'Home',  component : DashboardComponent, canActivate: [AuthGuard] },
         { path: 'settings',  component : SettingsComponent , canActivate: [AuthGuard]},
+        { path: 'Lead',  component : AdvancedLeadCreatorComponent , canActivate: [AuthGuard]},
+        { path: 'LeadDetails/:id',  component : LeadDetailsComponent , canActivate: [AuthGuard]},
+        { path: 'helpCenter',  component : HelpCenterComponent ,  canActivate: [AuthGuard]},
+        { path: 'changePassword',  component : ChangePasswordComponent , canActivate: [AuthGuard]}
 
         ]
     },

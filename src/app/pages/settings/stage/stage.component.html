@@ -1,13 +1,73 @@
-<form>
+<form (ngSubmit)="f.valid && submit(f)" #f="ngForm">
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Pipeline Name</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !pipeId.valid }">
+      <label for="inputEmail4">PipeLine Name</label>
+      <select id="ddlpipeline"  [(ngModel)]="model.pipeId" name="pipeID" #pipeId="ngModel" class="form-control" required>
+        <option value=""> Please choose one </option>
+        <option *ngFor="let item of pipeLineData" [value]="item.pipeID">{{item?.pipeName}}</option>
+      </select>
+      <div *ngIf="f.submitted && !pipeId.valid" class="help-block">Select PipeName</div>
+      
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Stage Name</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !stageName.valid }">
+      <label for="txtstageName">Stage Name</label>
+      <input type="text" class="form-control" name="stageName" id="txtstageName" placeholder="Stage Name" [(ngModel)]="model.stageName" #stageName="ngModel" required>
+      <div *ngIf="f.submitted && !stageName.valid" class="help-block">Stage Name is required</div>
+      
     </div>
   </div>  
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <div class="row">
+    <div class="col-1">
+      <button [disabled]="isSaving" class="btn btn-primary">
+        <span *ngIf="isSaving" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Submit
+        </button>
+    </div>
+    <div class="col-1">
+      <input type="reset" (click)="Reset()" class="btn btn-primary" value="Reset">
+    </div>
+  </div>
 </form>
+
+<hr>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">PipeLine Name</label>
+    <select id="ddlsearchpipeline" (change)="selectPipeLine($event)"  class="form-control" required>
+      <option value=""> Please choose one </option>
+      <option *ngFor="let item of pipeLineData" [value]="item.pipeID">{{item?.pipeName}}</option>
+    </select>
+  </div>
+</div> 
+<div class="table-responsive"> 
+  <table class="table  table-bordered mttable"  *blockUI="'contact-list'">
+    <thead>
+      <tr >
+        <th scope="col">SN</th>
+        <th scope="col">Stage Name</th>
+        <th scope="col">Sequence</th>
+        <th scope="col" colspan="2"></th>
+        
+      </tr>
+    </thead>
+    <tbody cdkDropList
+    #personList = "cdkDropList"
+    [cdkDropListData] = "pageOfItems"
+    [cdkDropListConnectedTo] = "[userlist]"
+    class = "example-list"
+    (cdkDropListDropped) = "onDrop($event)">
+      <tr *ngFor="let item of pageOfItems; index as i" cdkDrag>
+        <th scope="row">{{i+1}}</th>
+        <td>{{item?.stageName}}</td>
+        <td>{{i+1}}</td>
+        <td><i class="fa fa-pencil" style="cursor: pointer;" (click)="EditStage(item)" aria-hidden="true"></i></td>
+        <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i>
+          
+        </td>
+      </tr> 
+    
+    </tbody>
+  </table>  
+    <jw-pagination class="pull-right" [items]="allStage" (changePage)="onChangePage($event)"></jw-pagination>
+
+  </div>

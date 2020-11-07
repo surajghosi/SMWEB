@@ -1,0 +1,79 @@
+
+<div class="container-fulid" style="background-color: white;">
+    <br>
+    <div  style="margin-left: 10px; margin-right: 10px;">
+       
+        <div class="card ">
+            <div class="card-header">
+              <h4>{{leadDetails?.leadName}} </h4>
+              
+              <div class="pull-right" style="margin-top:-37px">
+                <!-- <input type="text" class="form-control" placeholder="assign to someone...."> -->
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar"> {{leadDetails?.assignUserName}}
+                <i class="fa fa-pencil-square-o"></i>   <a  href="javascript:void(0)" id="list-home-list">assign</a>    
+              </div>
+              <div>
+                
+                    <div class="row leaddetailsoption">
+                      <div class="col-sm">
+                        <i class="fa fa-pencil-square-o"></i>   <a  href="javascript:void(0)" id="list-home-list">Edit Lead Name</a>    
+                      </div>
+                      <div class="col-sm">
+                        <i class="fa fa-thumbs-up"></i> / <i class="fa fa-thumbs-down"></i>
+                             <a  href="javascript:void(0)" id="list-home-list">Mark as won / lost</a>    
+                      </div>
+                      <div class="col-sm">
+                        <i class="fa fa-times"></i>   <a  href="javascript:void(0)" id="list-home-list">Delete</a>    
+                      </div>
+                      <div class="col-sm">
+                        <i class="fa fa-bars"></i>   <a  href="javascript:void(0)" id="list-home-list">Change Pipeline</a>    
+                      </div>
+                      <div class="col-sm">
+                        <i class="fa fa-retweet"></i>   <a  href="javascript:void(0)" id="list-home-list">Change Stage</a>    
+                      </div>
+                     
+                      
+                    </div>
+                  
+
+                
+              </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                      <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><i class="fa fa-tasks mr-1" aria-hidden="true"></i>Todo</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="fa fa-user mr-1" aria-hidden="true"></i>Contact</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><i class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Notes</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Files</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-briefcase mr-1" aria-hidden="true"></i>Product</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-soundcloud mr-1" aria-hidden="true"></i>Sources</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Zones</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-key mr-1" aria-hidden="true"></i>Manage Access</a>
+                        <a style="text-align: center;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+                          Lead Value
+                          <h4 >
+                          ${{leadDetails?.leadValue}}
+                        </h4></a>
+                      </div>
+                    </div>
+                    <div class="col-10" style="border: 2px solid gray;">
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                            <app-todo [leadDetailsMode]=true  [leadId]=parentLeadId></app-todo>
+                        </div>
+                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                          <app-contact  [leadId]=parentLeadId></app-contact>
+                        </div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+                      </div>
+                    </div>
+                  </div>
+             
+            </div>
+          </div>
+    </div>
+
+</div>

@@ -6,6 +6,7 @@ import { ConfirmDialogService } from 'src/app/_commonComponent/confirmation/inde
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { NgForm } from '@angular/forms';
 import { Pagination } from 'src/app/_commonComponent/common/pagination';
+import { BlockTemplateComponent } from 'src/app/_commonComponent/index';
 @Component({
   selector: 'app-usermanagement',
   templateUrl: './usermanagement.component.html',
@@ -19,9 +20,10 @@ export class UsermanagementComponent implements OnInit {
   allUser: any = [];
   pageOfItems: Array<any>;
   @BlockUI('contact-list') blockUIList: NgBlockUI;
-  constructor( private commonService: CommonService ,private route: ActivatedRoute,
+  blockTemplate = BlockTemplateComponent;
+  constructor( private commonService: CommonService , private route: ActivatedRoute,
                private router: Router, private userManagementService: UserManagementService,
-               private confirmDialogService: ConfirmDialogService, ) { }
+               private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
     this.model.role = '';
@@ -45,7 +47,7 @@ export class UsermanagementComponent implements OnInit {
            data => {
                this.isSaving = false;
                this.getAllUser();
-               this.model = {}; 
+               this.model = {};
                f.reset();
                f.resetForm();
                this.model.role = '';
@@ -54,22 +56,22 @@ export class UsermanagementComponent implements OnInit {
               this.isSaving = false;
            });
 }
-getAllUser() {
-  this.blockUIList.start('Loading...'); // Start blocking element only
-  this.userManagementService.GetAllUser(Pagination.pageNo, Pagination.size).pipe(
-    ).subscribe(
-      (data: any) => {
-          this.allUser = data.data;
-          this.blockUIList.stop(); // Stop blocking
-         },
-          error => {
+  getAllUser() {
+    this.blockUIList.start('Loading...'); // Start blocking element only
+    this.userManagementService.GetAllUser(Pagination.pageNo, Pagination.size).pipe(
+      ).subscribe(
+        (data: any) => {
+            this.allUser = data.data;
             this.blockUIList.stop(); // Stop blocking
-         });
-}
-onChangePage(pageOfItems: Array<any>) {
-  // update current page of items
-  this.pageOfItems = pageOfItems;
-}
+          },
+            error => {
+              this.blockUIList.stop(); // Stop blocking
+          });
+  }
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+  }
 showDialog(user) {
   this.confirmDialogService.confirmThis('Are you sure to delete?', () => {
     this.DeleteUser(user.userId);
@@ -86,19 +88,17 @@ EditUser(user) {
           error => {
          });
  }
- 
  DeleteUser(id) {
   this.userManagementService.DeleteUserById(id).pipe(
     ).subscribe(
       (data: any) => {
         this.getAllUser();
-          //this.model = data.data;
          },
           error => {
          });
  }
  Reset() {
-   this.model = {};   
+   this.model = {};
  }
 
 }

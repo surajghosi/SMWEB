@@ -1,0 +1,48 @@
+<form class="clearfix" (ngSubmit)="f.valid && addLeadManageAccess(f,f.submitted)" #f="ngForm" novalidate>  
+  
+  <div class="ng-autocomplete">
+    <ng-autocomplete 
+      [data]="allUser"
+      placeHolder="Please search username and select"
+      [searchKeyword]="keyword"
+      (selected)='selectEvent($event)'
+      (inputChanged)='onChangeSearch($event)'
+      (inputFocused)='onFocused($event)'
+      [itemTemplate]="itemTemplate"
+      [notFoundTemplate]="notFoundTemplate">                                 
+    </ng-autocomplete>
+     
+    <ng-template #itemTemplate let-item>
+    <a [innerHTML]="item.name"></a>
+    </ng-template>
+     
+    <ng-template #notFoundTemplate let-notFound>
+    <div [innerHTML]="notFound"></div>
+    </ng-template>
+    </div>
+     
+  
+  
+  
+  <!-- <button [disabled]="isSaving" class="btn btn-primary float-right mb-1">
+    <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+    Submit
+    </button> -->
+    
+</form>
+<div class="col-md-12 mt-2 table-responsive" *ngIf="allManageAccessList.length>0">
+  <table class="table  table-bordered mttable">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr  *ngFor="let item of allManageAccessList">
+          <td>{{item?.name}}</td>
+          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i></td>
+        </tr>
+        </tbody>
+        </table>
+</div>

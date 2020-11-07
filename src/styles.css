@@ -4,16 +4,23 @@
     --first-color: #4680FF;
     --second-color: #ffff8c;
     --deleteColor: red;
+    --fontcolor:white;
   } 
 .toast-container .ngx-toastr
 {
     width: auto !important;
 }
+a.nav-link ,a.nav-link:hover {
+    color: var(--fontcolor) ;
+}
+.leadoption {
+    color: var(--first-color) !important ;
+}
 a{
-    color:white ;
+    color: var(--first-color) ;
 }
 a:hover{
-    color:white
+    color: var(--first-color) ;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link
 {
@@ -32,11 +39,19 @@ a:hover{
 {
     color:var(--deleteColor) !important;
 }
-.fa {
-    color:var(--first-color);
-}
+/* .fa {
+    color:var(--fontcolor);
+} */
 .page-link:hover
 {
     background-color :var(--first-color);
     border-color : var(--first-color);
 }
+.popup-modal .nav-item
+{
+    margin-right: 1px;
+   
+    background: #00bcd4;
+   
+}
+

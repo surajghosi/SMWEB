@@ -1,138 +1,154 @@
 <main>
   <div class="container-fluid">
-      <!-- Start of Filter & badge Section -->
-      <section id="filter-badge-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-3 col-sm-4 col-12">
-                      <div class="search-filter">
-                          <div class="form-group">
-                              <div class="input-group mb-3">
-                                  <input type="text" class="form-control" placeholder="Start typing a lead name">
-                                  <div class="input-group-append">
-                                      <button 
-                                      class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="filter-drop">
-                          <ul class="navbar-nav d-inline-block">
-                              <li class="nav-item dropdown d-inline-block mr-0">
-                                  <a class="nav-link dropdown-toggle p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-columns" aria-hidden="true"></i></a>
-                                  <div class="dropdown-menu user-profile">
-                                      <a class="dropdown-item" href="#!">Add Team Members</a>
-                                      <a class="dropdown-item" href="#!">Help Center</a>
-                                      <a class="dropdown-item" href="#!">Change Password</a>
-                                      <a class="dropdown-item" href="#!">Sign Out</a>
-                                  </div>
-                              </li>
-                              <li class="nav-item dropdown d-inline-block mr-0">
-                                  <a class="nav-link dropdown-toggle p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
-                                  <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="#!">Add Team Members</a>
-                                      <a class="dropdown-item" href="#!">Help Center</a>
-                                      <a class="dropdown-item" href="#!">Change Password</a>
-                                      <a class="dropdown-item" href="#!">Sign Out</a>
-                                  </div>
-                              </li>
-                              <li class="nav-item dropdown d-inline-block mr-0">
-                                  <a class="nav-link dropdown-toggle p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter" aria-hidden="true"></i></a>
-                                  <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="#!">Add Team Members</a>
-                                      <a class="dropdown-item" href="#!">Help Center</a>
-                                      <a class="dropdown-item" href="#!">Change Password</a>
-                                      <a class="dropdown-item" href="#!">Sign Out</a>
-                                  </div>
-                              </li>
-                              <li class="nav-item dropdown d-inline-block mr-0">
-                                  <a class="nav-link dropdown-toggle p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
-                                  <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="#!">Add Team Members</a>
-                                      <a class="dropdown-item" href="#!">Help Center</a>
-                                      <a class="dropdown-item" href="#!">Change Password</a>
-                                      <a class="dropdown-item" href="#!">Sign Out</a>
-                                  </div>
-                              </li>
-                              <li class="nav-item dropdown d-inline-block mr-0">
-                                  <a class="nav-link dropdown-toggle p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-tags" aria-hidden="true"></i></a>
-                                  <div class="dropdown-menu">
-                                      <div class="dropdown-item">
-                                          <div class="color-demo"></div>
-                                          <p>Tag #1</p>
-                                      </div>
-                                      <div class="dropdown-item">
-                                          <div class="color-demo green"></div>
-                                          <p>Tag #2</p>
-                                      </div>
-                                      <div class="dropdown-item">
-                                          <div class="color-demo purple"></div>
-                                          <p>Tag #3</p>
-                                      </div>
-                                      <div class="dropdown-item">
-                                          <div class="color-demo orange"></div>
-                                          <p>Tag #4</p>
-                                      </div>
-                                      <div class="dropdown-item">
-                                          <div class="color-demo marron"></div>
-                                          <p>Tag #5</p>
-                                      </div>
-                                  </div>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col-md-4 offset-md-0 col-sm-offset-0 col-xs-offset-0">
-                      <div class="lead-title">
-                          <div class="form-group">
-                              <div class="input-group mb-3">
-                                  <input type="text" class="form-control" placeholder="Give your lead a title">
-                                  <div class="input-group-append">
-                                      <button class="input-group-text">Add Lead</button>
-                                      <button class="input-group-text" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-             
-              <div class="filter-badges">
-                  <div class="row">
-                      <div class="col-md-9">
-                          <span class="badge badge-secondary">Current pipline: Default <i class="fa fa-times" aria-hidden="true"></i></span>
-                          <span class="badge badge-secondary">Showing: All Leads <i class="fa fa-times" aria-hidden="true"></i></span>
-                          <span class="badge badge-secondary">Filter Applied: None <i class="fa fa-times" aria-hidden="true"></i></span>
-                          <span class="badge badge-secondary">Tag: All <i class="fa fa-times" aria-hidden="true"></i></span>
-                          <span class="badge badge-secondary">Current pipline: Default <i class="fa fa-times" aria-hidden="true"></i></span>
-
-                      </div>
-                      <div class="col-md-3">
-                          <span class="badge badge-secondary float-right pointer">Import Leads from a <b>CSV</b>
-                              or an <b>Excel</b> file</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <!-- End of Filter & badge Section -->
-
+     
       
-      <!-- Start of Project Card Section -->
-
+      <block-temp *ngIf="loading"></block-temp>
+      
       <section id="project-card-section">
+        <div class="row">
+           
+           
+           
+           <div class="col-md-9">
+            <div class="card">
+                
+                <div class="card-header">
+                    <button type="button" class="btn btn-link" style="color:#4680FF" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-plus"></i></button>  Filter Section
+                  <button type="button" class="btn btn-primary pull-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Total Leads Count">
+                    Total Leads :  <span class="badge badge-pill badge-info" style="font-size: small;"> {{totalLeadsCount}}</span>
+                    
+                  </button>
+                </div>
+                <div id="collapseOne"  class="collapse show" aria-labelledby="headingOne" >
+                <div class="card-body popup-modal" >
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                
+                                    <label for="txtPipeLineName">PipeLine Name</label>
+                                    <select class="form-control" [(ngModel)]="filter.pipeId" (change)="loadPipeLine(filter.pipeId)">
+                                        <option [value]="item.pipeID" *ngFor="let item of allPipeLine">{{item?.pipeName}}</option>
+                                    </select>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-12">
+                            
+                                <div class="form-group">
+                                   
+                                        <label for="txtPipeLineName">Lead Name</label>
+                                        <input type="text" [(ngModel)]="filter.leadName" (ngModelChange)="filterLeads()" class="form-control" placeholder="Start typing a lead name">
+                                    
+                                </div>
+                            
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-12">
+                            <div class="form-group">
+                                
+                                    <label for="txtPipeLineName">User Name</label>
+                                    <select class="form-control" [(ngModel)]="filter.assignUser" (change)="filterLeads()">
+                                        <option value=""> Please choose User name </option>
+                                        <option *ngFor="let item of allUser" [value]="item.userId">{{item?.name}}</option>
+                                    </select>
+                               
+                            </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-12">
+                                <div class="form-group">
+                                    
+                                        <label for="txtPipeLineName">Lead Type</label>
+                                        <select class="form-control" [(ngModel)]="filter.leadType" (change)="filterLeads()">
+                                            <option value=""> Please choose Lead Type</option>
+                                            <option value="1">Assign Lead</option>
+                                            <option value="0">UnAssign Lead</option>
+                                        </select>
+
+                                        
+                                    
+                                </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-12">
+                            
+                                    <div class="form-group">
+                                       
+                                            <label for="txtPipeLineName">Date Range</label>
+                                            
+                                            <input type="text" ngxDaterangepickerMd
+                                            [(ngModel)]="selectedDate"
+                                            [showCustomRangeLabel]="true"
+                                            [alwaysShowCalendars]="true"
+                                            [ranges]="ranges"
+                                            [linkedCalendars]="true"
+                                            [isInvalidDate] = "isInvalidDate"
+                                            [showClearButton]="true"
+                                            (ngModelChange)="filterLeads()"
+                                            class="form-control"
+                                            
+                                            placeholder="Select please..."/>
+                                    </div>
+                                
+                            </div>
+                                <div class="col-md-2 col-sm-4 col-12" style="margin-top:1.7rem !important">
+                                    <div class="form-group">
+                                            <input type="button" value="Reset Filter" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Reset Filter" (click)="resetFilter()" class="btn btn-primary">
+                                        
+                                    </div>
+                                    </div>
+
+                    </div>
+                    </div>
+                </div>
+    
+                    </div>
+           </div>
+           <div class="col-md-3 offset-md-0 col-sm-offset-0 col-xs-offset-0">
+            <div class="card">
+                <div class="card-header">
+                    <button type="button" class="btn btn-link" style="color:#4680FF" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-plus"></i></button>   Lead Section
+                </div>
+                <div id="collapseOne"  class="collapse show" aria-labelledby="headingOne" >
+                <div class="card-body popup-modal" >
+                    <div class="lead-title">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" [(ngModel)]="directLeadName" placeholder="Give your lead a title">
+                                <div class="input-group-append">
+                                    <button class="input-group-text" [disabled]="isSaving" data-toggle="tooltip" data-placement="bottom" title="" (click)="addDirectLead()" data-original-title="Lead Create by name">
+                                        <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+                                        Add Lead
+                                    </button>
+                                    <button class="input-group-text" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Advanced Lead Creator"  [routerLink]="['/Lead']"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                </div>
+                                
+                            </div>
+                            <a href="" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Create Lead By CSV file.(just upload csv file).">csv </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+           
+        </div>
+           
+           
+        </div>
+        
           <div class="container-fluid">
               <div class="project-content">
-                  <ul class="ul-list d-inline-block">
-                      <li class="li-list d-inline-block">
-
+               
+                  <ul class="ul-list d-inline-block"  *ngIf="allLeadInfo" cdkDropList [cdkDropListData]="allLeadInfo"  (cdkDropListDropped)="onTrackDrop($event)" cdkDropListOrientation="horizontal"   >
+                    
+                      <li class="li-list d-inline-block" *ngFor="let item of allLeadInfo" >
+                         
                           <div class="card border-secondary project-card">
-                              <div class="card-body card-body-content">
+                              <div class="card-body card-body-content"  >
                                   <div class="project-card-title mb-3 ">
-                                      <h4 class="card-title d-inline-block">Design Sprint</h4>
-                                      <a class="nav-link dropdown-toggle p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                      <h4 class="card-title d-inline-block">{{item.stageDetails?.stageName}}
+                                        <span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Leads Count">{{item.leadDetails.length}}</span>
+
+                                      </h4>
+                                      <a class="nav-link dropdown-toggle leadoption p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
                                       <div class="dropdown-menu">
                                           <a class="dropdown-item" href="#!">Add Team Members</a>
                                           <a class="dropdown-item" href="#!">Help Center</a>
@@ -140,1336 +156,88 @@
                                           <a class="dropdown-item" href="#!">Sign Out</a>
                                       </div>
                                   </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body ">
-                                              <div class="color-tags">
-                                                  <p class="color green"></p>
-                                                  <p class="color orange"></p>
-                                                  <p class="color purple"></p>
-                                                  <p class="color green"></p>
-                                              </div>
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's standard dummy text ever since the 1500s,
-                                                          when an unknown printer took a galley of type and
-                                                          scrambled it to make a type specimen book. It has
-                                                          survived not only five centuries, but also the leap into
-                                                          electronic typesetting, remaining essentially unchanged.
-                                                      </p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assest/./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
+                                
+                                      
+                                 
+                                  <div class="card-body card-body-content"  [ngStyle]="{'height.px': cardHeight}" cdkDropList [id]="item.stageDetails.stageId" [cdkDropListData]="item.leadDetails"
+                                  [cdkDropListConnectedTo]="trackIds" (cdkDropListDropped)="onTalkDrop($event)">
+                                  <div class="project-todo" *ngFor="let leaddata of item.leadDetails" cdkDrag  [routerLink]="['/LeadDetails', leaddata.leadId]">
+                                    <div class="card border-light mb-3">
+                                        <div class="card-body ">
+                                            <!-- <div class="color-tags">
+                                                <p class="color green"></p>
+                                                <p class="color orange"></p>
+                                                <p class="color purple"></p>
+                                                <p class="color green"></p>
+                                            </div> -->
+                                            <div class="todo-title">
+                                                <p class="font-weight-normal d-inline-block">{{leaddata?.leadName}}</p>
+                                               
+                                            </div>
+                                            <div class="todo-content">
+                                                <!-- <div class="todo-description">
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                                        typesetting industry. Lorem Ipsum has been the
+                                                        industry's standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type and
+                                                        scrambled it to make a type specimen book. It has
+                                                        survived not only five centuries, but also the leap into
+                                                        electronic typesetting, remaining essentially unchanged.
+                                                    </p>
+                                                </div> -->
+                                                <div class="todo-footer">
+                                                    <ul class="attachment-icon d-inline-block">
+                                                        <li class="badge badge-primary d-inline-block" style="margin-right:5px" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Lead Value">
+                                                            <i class="fa fa-inr" aria-hidden="true">
+                                                                
+                                                            </i><span>{{leaddata?.leadValue}}</span></li>
+                                                        <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Assign User">
+                                                            <i class="fa fa-user" aria-hidden="true"></i><span>{{leaddata?.assignUserName}}</span></li>
+                                                    </ul>
+                                                    <ul class="attachment-icon d-inline-block float-right">
+                                                        <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
+                                                        <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
+                                                    </ul>
+                                                    <!-- <div class="invite-member float-right">
+                                                        <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="invited-member float-right mr-1">
+                                                             <img class="user-img" src="./assest/./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
+                                                            <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
+                                                            <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3"> 
 
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                   </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
+                                
+                                 
                               </div>
                           </div>
 
                       </li>
-                      <li class="li-list d-inline-block">
-
-                          <div class="card border-secondary project-card" style="max-width: 18rem;">
-                              <div class="card-body card-body-content">
-                                  <div class="project-card-title mb-3 ">
-                                      <h4 class="card-title d-inline-block">Design Sprint</h4>
-                                      <a class="nav-link dropdown-toggle p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                                      <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#!">Add Team Members</a>
-                                          <a class="dropdown-item" href="#!">Help Center</a>
-                                          <a class="dropdown-item" href="#!">Change Password</a>
-                                          <a class="dropdown-item" href="#!">Sign Out</a>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body ">
-                                              <div class="color-tags">
-                                                  <p class="color green"></p>
-                                                  <p class="color orange"></p>
-                                                  <p class="color green"></p>
-                                              </div>
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's standard dummy text ever since the 1500s,
-                                                          when an unknown printer took a galley of type and
-                                                          scrambled it to make a type specimen book. It has
-                                                          survived not only five centuries, but also the leap into
-                                                          electronic typesetting, remaining essentially unchanged.
-                                                      </p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="color-tags">
-                                                  <p class="color green"></p>
-                                                  <p class="color orange"></p>
-                                                  <p class="color purple"></p>
-                                                  <p class="color green"></p>
-                                              </div>
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-
-                      </li>
-                      <li class="li-list d-inline-block">
-
-                          <div class="card border-secondary project-card" style="max-width: 18rem;">
-                              <div class="card-body card-body-content">
-                                  <div class="project-card-title mb-3 ">
-                                      <h4 class="card-title d-inline-block">Design Sprint</h4>
-                                      <a class="nav-link dropdown-toggle p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                                      <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#!">Add Team Members</a>
-                                          <a class="dropdown-item" href="#!">Help Center</a>
-                                          <a class="dropdown-item" href="#!">Change Password</a>
-                                          <a class="dropdown-item" href="#!">Sign Out</a>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's standard dummy text ever since the 1500s,
-                                                          when an unknown printer took a galley of type and
-                                                          scrambled it to make a type specimen book. It has
-                                                          survived not only five centuries, but also the leap into
-                                                          electronic typesetting, remaining essentially unchanged.
-                                                      </p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-
-                      </li>
-                      <li class="li-list d-inline-block">
-
-                          <div class="card border-secondary project-card" style="max-width: 18rem;">
-                              <div class="card-body card-body-content">
-                                  <div class="project-card-title mb-3 ">
-                                      <h4 class="card-title d-inline-block">Design Sprint</h4>
-                                      <a class="nav-link dropdown-toggle p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                                      <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#!">Add Team Members</a>
-                                          <a class="dropdown-item" href="#!">Help Center</a>
-                                          <a class="dropdown-item" href="#!">Change Password</a>
-                                          <a class="dropdown-item" href="#!">Sign Out</a>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's standard dummy text ever since the 1500s,
-                                                          when an unknown printer took a galley of type and
-                                                          scrambled it to make a type specimen book. It has
-                                                          survived not only five centuries, but also the leap into
-                                                          electronic typesetting, remaining essentially unchanged.
-                                                      </p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-
-                      </li>
-                      <li class="li-list d-inline-block">
-
-                          <div class="card border-secondary project-card" style="max-width: 18rem;">
-                              <div class="card-body card-body-content">
-                                  <div class="project-card-title mb-3 ">
-                                      <h4 class="card-title d-inline-block">Design Sprint</h4>
-                                      <a class="nav-link dropdown-toggle p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                                      <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#!">Add Team Members</a>
-                                          <a class="dropdown-item" href="#!">Help Center</a>
-                                          <a class="dropdown-item" href="#!">Change Password</a>
-                                          <a class="dropdown-item" href="#!">Sign Out</a>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's standard dummy text ever since the 1500s,
-                                                          when an unknown printer took a galley of type and
-                                                          scrambled it to make a type specimen book. It has
-                                                          survived not only five centuries, but also the leap into
-                                                          electronic typesetting, remaining essentially unchanged.
-                                                      </p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="project-todo">
-                                      <div class="card border-light mb-3">
-                                          <div class="card-body">
-                                              <div class="todo-title">
-                                                  <p class="font-weight-normal d-inline-block">Angular Project</p>
-                                                  <ul class="attachment-icon d-inline-block float-right">
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Notes"><i class="fa fa-sticky-note" aria-hidden="true"></i><span>2</span></li>
-                                                      <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Attached Files"><i class="fa fa-paperclip" aria-hidden="true"></i><span>4</span></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="todo-content">
-                                                  <div class="todo-description">
-                                                      <p>Lorem Ipsum is simply dummy text of the printing and
-                                                          typesetting industry. Lorem Ipsum has been the
-                                                          industry's
-                                                          standard dummy text ever since the 1500s, when an
-                                                          unknown
-                                                          printer took a galley of type and scrambled it to make a
-                                                          type specimen book. It has survived not only five
-                                                          centuries,
-                                                          but also the leap into electronic typesetting, remaining
-                                                          essentially unchanged.</p>
-                                                  </div>
-                                                  <div class="todo-footer">
-                                                      <ul class="attachment-icon d-inline-block">
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bookmark"><i class="fa fa-book" aria-hidden="true"></i><span>1</span></li>
-                                                          <li class="badge badge-primary d-inline-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tags"><i class="fa fa-tags" aria-hidden="true"></i><span>3</span></li>
-                                                      </ul>
-                                                      <div class="invite-member float-right">
-                                                          <div class="add-member text-center float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Invite Members">
-                                                              <i class="fa fa-plus" aria-hidden="true"></i>
-                                                          </div>
-                                                          <div class="invited-member float-right mr-1">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 1">
-                                                              <img class="user-img" src="./assets/img/user-2.jpg" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="USer 2">
-                                                              <img class="user-img" src="./assets/img/user-1.png" alt="User-1" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User 3">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                              </div>
-                          </div>
-
-                      </li>
-                      
+                     
+                    
 
                   </ul>
+               
+
 
 
               </div>
           </div>
       </section>
 
-      <!-- End of Project Card Section -->
-
-    <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-<div class="modal-dialog">
-
-<!-- Modal content-->
-<div class="modal-content">
-  <div class="modal-header">
-  <h4 class="modal-title">Advanced Lead Creator</h4>
-  <button type="button" class="close" data-dismiss="modal">×</button>
-  </div>
-  <div class="modal-body popup-modal">
-      <ul class="nav nav-tabs">
-          <li class="nav-item nav-tab-links">
-            <a class="nav-link active" data-toggle="tab" href="#leadinfo"><i class="fa fa-exchange mr-1" aria-hidden="true"></i>Lead Info</a>
-            <span>5</span>
-          </li>
-          <li class="nav-item nav-tab-links">
-            <a class="nav-link" data-toggle="tab" href="#todos"><i class="fa fa-tasks mr-1" aria-hidden="true"></i>Todos</a><span>1</span>
-          </li>
-          <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#contacts"><i class="fa fa-user mr-1" aria-hidden="true"></i>Contacts</a>
-              <span>22</span>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#notes"><i class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Notes</a>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#files"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Files</a>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#fields"><i class="fa fa-book mr-1" aria-hidden="true"></i>Fields</a>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#products"><i class="fa fa-briefcase mr-1" aria-hidden="true"></i>Products</a>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#sources"><i class="fa fa-soundcloud mr-1" aria-hidden="true"></i>Sources</a>
-              <span>5</span>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#zones"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Zones</a>
-            </li>
-            <li class="nav-item nav-tab-links">
-              <a class="nav-link" data-toggle="tab" href="#manageaccess"><i class="fa fa-key mr-1" aria-hidden="true"></i>Manage Access</a>
-            </li>
-        </ul>
-
-  <div id="myTabContent" class="tab-content pt-3">
-      <div class="tab-pane fade" id="leadinfo">
-              <form>
-                  <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="leadinfo">Lead Info</label>
-                        <input type="email" class="form-control" id="leadinfo" placeholder="Give your Lead a title">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label class="control-label">Lead Value</label>
-                            <div class="input-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
-                              </div>
-                              <input type="text" class="form-control" placeholder="Enter Lead Value">
-                            </div>
-                          
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="assignto">Assign To</label>
-                          <select class="form-control" id="assignto">
-                              <option>Revant G</option>
-                              <option>John Doe</option>
-                              <option>Revant G</option>
-                              <option>John Doe</option>
-                              <option>Revant G</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="pipline">Pipline</label>
-                          <select class="form-control" id="pipline">
-                              <option>Revant G</option>
-                              <option>John Doe</option>
-                              <option>Revant G</option>
-                              <option>John Doe</option>
-                              <option>Revant G</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="stage">Stage</label>
-                          <select class="form-control" id="stage">
-                              <option>Revant G</option>
-                              <option>John Doe</option>
-                              <option>Revant G</option>
-                              <option>John Doe</option>
-                              <option>Revant G</option>
-                          </select>
-                        </div>
-                        <div class="col-md-6"></div>
-                
-      </div></form>
-      </div>
-      <div class="tab-pane fade active show" id="todos">
-          <form>
-              <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <label for="addtodo">Add Todo</label>
-                    <div class="input-group">
-                    <input type="text" class="form-control" id="addtodo" placeholder="I have to do..">
-                    <div class="input-group-append">
-                      <button class="input-group-text"><i class="fa fa-plus" aria-hidden="true"></i>Add Todo</button>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="form-group col-md-4">
-                      <label for="date">Pick Date</label>
-                      <div class="input-group">
-                      <input type="text" class="form-control" id="date" placeholder="Pick Date">
-                      <div class="input-group-append">
-                          <button class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                  </div>
-                    <div class="form-group col-md-4">
-                      <label for="time">Time</label>
-                      <div class="input-group">
-                      <input type="text" class="form-control" id="time" placeholder="Pick Time">
-                      <div class="input-group-append">
-                          <button class="input-group-text"><i class="fa fa-clock-o" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                  </div>
-                    <div class="form-group col-md-4">
-                      <label for="stage">Appointment</label>
-                      <select class="form-control" id="stage">
-                          <option>Revant G</option>
-                          <option>John Doe</option>
-                          <option>Revant G</option>
-                          <option>John Doe</option>
-                          <option>Revant G</option>
-                      </select>
-                    </div>
-              </div>
-          </form>
-          <div class="col-md-12 mt-2">
-              <table class="table table-hover">
-                  <tbody>
-                    <tr class="table-active">
-                      <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="">
-                      <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="table-active">
-                      <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    </tbody>
-                    </table>
-          </div>
-      </div>
-      
-      <div class="tab-pane fade" id="contacts">
-      </div>
-      
-      <div class="tab-pane fade" id="notes">
-          <form class="clearfix">  
-              <div class="form-group">
-                  <label for="addnotes">Add Notes</label>
-                  <textarea class="form-control" id="addnotes" rows="3"></textarea>
-                </div>
-                <button class="btn btn-primary float-right mb-1">Add Notes</button>
-          </form>
-          <div class="col-md-12 mt-2 p-0">
-              <table class="table table-hover">
-                  <tbody>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    </tbody>
-                    </table>
-          </div>
-      </div>
-      <div class="tab-pane fade" id="files">
-          <form class="clearfix">  
-              <div class="form-group">
-                  <div class="custom-file">
-                      <div class="file-upload">
-                          <div class="file-select">
-                            <div class="file-select-button" id="fileName">Choose File</div>
-                            <div class="file-select-name" id="noFile">No file chosen...</div> 
-                            <input type="file" name="chooseFile" id="chooseFile">
-                          </div>
-                        </div>
-                    </div>
-                </div>
-          </form>
-          <div class="col-md-12 mt-2 p-0">
-              <table class="table table-border table-hover">
-                  <thead>
-                      <tr>
-                        <th scope="col">File Name</th>
-                        <th scope="col">Upload By</th>
-                        <th scope="col">Upload On</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                    </tr>
-                    <tr class="">
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                    </tr>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                    </tr>
-                    </tbody>
-                    </table>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="fields">
-          <form class="clearfix">  
-              <div class="form-group">
-                      <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="fieldname">Field Name</label>
-                            <input type="text" class="form-control" id="fieldname" placeholder="Field Name">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="fieldvalue">Field Value</label>
-                              <input type="text" class="form-control" id="fieldvalue" placeholder="Field Value">
-                            </div>
-                          </div>
-                          <button class="btn btn-primary float-right">Add Field</button>
-              </div>
-           </form>
-          <div class="col-md-12 mt-2 p-0">
-                          <table class="table table-border table-hover">
-                              <thead>
-                                  <tr>
-                                    <th scope="col">Field Name</th>
-                                    <th scope="col">Field Value</th>
-                                    <th scope="col">Delete</th>
-                                  </tr>
-                                </thead>
-                              <tbody>
-                                <tr class="table-active">
-                                  <td>Column content</td>
-                                  <td>Column content</td>
-                                  <td><i class="fa fa-trash pointer" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="">
-                                  <td>Column content</td>
-                                  <td>Column content</td>
-                                  <td><i class="fa fa-trash pointer" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="table-active">
-                                  <td>Column content</td>
-                                  <td>Column content</td>
-                                  <td><i class="fa fa-trash pointer" aria-hidden="true"></i></td>
-                                </tr>
-                                </tbody>
-                                </table>
-          </div>
-       </div>
-       <div class="tab-pane fade" id="products">
-          <form class="clearfix">  
-              <div class="form-group">
-                      <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="productname">Product Name</label>
-                            <input type="text" class="form-control" id="productname" placeholder="Product Name">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="productquality">Product Quality</label>
-                              <input type="text" class="form-control" id="productquality" placeholder="Product Quality">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="productprice">Product Price</label>
-                              <div class="input-group">
-                              <input type="text" class="form-control" id="productprice" placeholder="Product Price">
-                              <div class="input-group-append">
-                                  <button class="input-group-text"><i class="fa fa-usd" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                      </div>
-                            
-                            <div class="form-group col-md-6">
-                              <label for="productdiscount">Product Discount</label>
-                              <div class="input-group">
-                                  <input type="text" class="form-control" id="productdiscount" placeholder="Product Discount">
-                                  <div class="input-group-append">
-                                      <button class="input-group-text"><i class="fa fa-percent" aria-hidden="true"></i></button>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-                          </div>
-                          <button class="btn btn-primary float-right">Add Field</button>
-           </form>
-
-           <div class="col-md-12 mt-2 p-0">
-              <table class="table table-border table-hover">
-                  <thead>
-                      <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Discount</th>
-                        <th scope="col">Quantity</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                    </tr>
-                    <tr class="">
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                    </tr>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                      <td>Column content</td>
-                    </tr>
-                    </tbody>
-                    </table>
-        </div>
-
-      </div>
-      <div class="tab-pane fade" id="sources">
-          <form class="clearfix">  
-              <div class="form-group">
-                      <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="sourcename">Source Name</label>
-                              <div class="input-group">
-                              <input type="text" class="form-control" id="sourcename" placeholder="Source Name">
-                            </div>
-                      </div>
-                      <div class="form-group col-md-4">
-                          <button class="btn btn-primary mgt-30">Add Source</button>
-                      </div>
-                          </div>
-                          </div>
-                          
-           </form>
-           <div class="col-md-12 mt-2 p-0">
-              <table class="table table-border table-hover">
-                  <thead>
-                      <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Delete</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    </tbody>
-                    </table>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="zones">
-          <form class="clearfix">  
-              <div class="form-group">
-                      <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="zonename">Zone Name</label>
-                              <div class="input-group">
-                              <input type="text" class="form-control" id="zonename" placeholder="Zone Name">
-                            </div>
-                      </div>
-                      <div class="form-group col-md-4">
-                          <button class="btn btn-primary mgt-30">Add Zone</button>
-                      </div>
-                          </div>
-                          </div>
-                          
-           </form>
-           <div class="col-md-12 mt-2 p-0">
-              <table class="table table-border table-hover">
-                  <thead>
-                      <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Delete</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                      <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    </tr>
-                    </tbody>
-                    </table>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="manageaccess">
-          <form class="clearfix">  
-              <div class="form-group">
-                      <div class="form-row">
-                            <div class="form-group col-md-12">
-                              <label for="user">User</label>
-                              <div class="input-group">
-                              <input type="text" class="form-control" id="user" placeholder="User">
-                            </div>
-                      </div>
-                      </div>
-                      </div>
-                          
-           </form>
-           <div class="col-md-12 mt-2 p-0">
-              <table class="table table-border table-hover">
-                  <thead>
-                      <tr>
-                        <th scope="col">Name</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr class="table-active">
-                      <td>Column content</td>
-                    </tr>
-                    <tr class="">
-                      <td>Column content</td>
-                    </tr>
-                    </tbody>
-                    </table>
-        </div>
-      </div>
-    </div>
-        
-
-
-      <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Create Lead</button>
-      </div>
-      <!--End of Modal Body  -->
-  </div>
-</div>
-
-</div>
-
-</div>        
+    
        
       
 
-  </div>
+  </div> 
 
   
 </main>

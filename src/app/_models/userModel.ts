@@ -16,5 +16,4 @@ export class UserRegister {
 export class AuthenticateModel {
     UserName: string;
     Password: string;
-    
 }

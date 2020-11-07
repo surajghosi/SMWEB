@@ -15,3 +15,11 @@
     padding: 10px 10px 10px 10px;
     background: white;
 }
+.nav-item {
+    margin-right: 0px !important;
+}
+.left-tabs.nav-tabs, .right-tabs.nav-tabs, .left-tabs.sideways-tabs, .right-tabs.sideways-tabs
+{
+    height: auto !important;
+    background: #ff5722c2;
+}

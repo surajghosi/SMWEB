@@ -1,0 +1,48 @@
+<form class="clearfix">  
+  <div class="form-group">
+      <div class="custom-file">
+          <div class="file-upload" >
+              <div class="file-select" style="border-color:#4680FF" [ngClass]="{'disableDiv': isSaving}"> 
+               
+                <div class="file-select-button" style="background: #4680FF;color:white" id="fileName">
+                  <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+                  Choose File
+                </div>
+                <div class="file-select-name" id="noFile">No file chosen...</div> 
+                <input #file type="file"  (change)="upload(file.files)"  />
+                
+                
+              </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- <input #file type="file" multiple (change)="upload(file.files)" />
+<br/>
+<span style="font-weight:bold;color:green;" *ngIf="progress > 0 && progress < 100">
+  {{progress}}%
+</span>
+
+<span style="font-weight:bold;color:green;" *ngIf="message">
+  {{message}}
+</span> -->
+
+
+<div class="col-md-12 mt-2 table-responsive" *ngIf="allfilesList.length>0">
+  <table class="table  table-bordered mttable">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr  *ngFor="let item of allfilesList">
+          <td>{{item?.fileName}}</td>
+          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i></td>
+        </tr>
+        
+        </tbody>
+        </table>
+</div>

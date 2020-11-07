@@ -1,0 +1,95 @@
+<form class="clearfix" (ngSubmit)="f.valid && addProduct(f,f.submitted)" #f="ngForm" novalidate>  
+  <div class="form-group">
+
+    <div class="form-row">
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !productName.valid }">
+      <label for="txtProductName">Product Name</label>
+      <input type="text" class="form-control" name="productName" id="txtProductName" maxlength="600" placeholder="Product Name" [(ngModel)]="model.productName" #productName="ngModel" required>
+      <div *ngIf="f.submitted && !productName.valid" class="help-block">Product Name is required</div>
+    </div>
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !productPrice.valid }">
+      
+      <label for="txtProductPrice">Product Price</label>
+      <div class="input-group">
+      <input type="text" class="form-control" (keypress)="numberOnly($event)" name="productPrice" id="txtProductPrice" maxlength="10" placeholder="Product Price" [(ngModel)]="model.productPrice" #productPrice="ngModel" (ngModelChange)="onDiscountChange($event)" required>
+      <div class="input-group-append">
+        <button class="input-group-text"><i class="fa fa-usd" aria-hidden="true"></i></button>
+      </div>
+      </div>
+      <div *ngIf="f.submitted && !productPrice.valid" class="help-block">Product Price is required</div>
+    </div>
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !discountPercentage.valid }">
+      <label for="txtProductPercentage">Discount Percentage </label>
+      <div class="input-group">
+        
+      <input type="text" class="form-control"  (keypress)="numberOnly($event)" name="discountPercentage" id="txtProductPercentage" maxlength="" placeholder="Discount Percentage" [(ngModel)]="model.discountPercentage" #discountPercentage="ngModel" (ngModelChange)="onDiscountChange($event)"  required>
+      <div class="input-group-append">
+        <button class="input-group-text"><i class="fa fa-percent" aria-hidden="true"></i></button>  
+      </div>
+      
+      </div>
+      <div *ngIf="f.submitted && !discountPercentage.valid" class="help-block">Discount Percentage is required</div>
+    </div>
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !productDiscount.valid }">
+    
+      <label for="txtProductDiscount">Product Discount</label>
+      <div class="input-group">
+      <input type="text" class="form-control" (keypress)="numberOnly($event)" readonly name="productDiscount" id="txtProductDiscount" maxlength="5" placeholder="Product Discount" [(ngModel)]="model.productDiscount" #productDiscount="ngModel" required>
+      <div class="input-group-append">
+        <button class="input-group-text"><i class="fa fa-usd" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div *ngIf="f.submitted && !productDiscount.valid" class="help-block">Product discount is required</div>
+    </div>
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !quantity.valid }">
+      <label for="txtQuantity">Quantity</label>
+      <input type="text" class="form-control" name="quantity" id="txtQuantity" (keypress)="numberOnly($event)" maxlength="50" placeholder="Quantity" [(ngModel)]="model.quantity" (ngModelChange)="onQuantityChange($event)"  #quantity="ngModel" required>
+      <div *ngIf="f.submitted && !quantity.valid" class="help-block">Quantity is required</div>
+    </div>
+   </div>
+   <p style="font-weight: bold;"> Product price after discount :<span *ngIf="model.productPrice>0">{{model.productPrice - model.productDiscount}}</span>   </p>
+   <p style="font-weight: bold;"> Product price with quantity : <span *ngIf="model.productPrice>0">{{   (model.productPrice - model.productDiscount) * model.quantity }}</span></p>
+   <div class="row">
+    <div class="col-1" >
+    <button [disabled]="isSaving" class="btn btn-primary">
+    <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+    Submit
+    </button>
+    </div>
+    <div class="col-1">
+    <input type="reset"   class="btn btn-primary" value="Reset">
+    </div>
+    </div>
+</div>
+
+</form>
+
+<div class="col-md-12 mt-2 table-responsive" *ngIf="allProductsList.length>0">
+  <table class="table  table-bordered mttable">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Discount Percentage </th>
+        <th>Product Discount</th>
+        <th>Product Price(after discount)</th>
+        <th>Quantity</th>
+        <th>Final Price</th>
+        <td></td>
+      </tr>
+    </thead>
+      <tbody>
+        <tr  *ngFor="let item of allProductsList">
+          <td>{{item?.productName}}</td>
+          <td>{{item?.productPrice}}</td>
+          <td>{{item?.discountPercentage}} %</td>
+          <td>{{item?.productDiscount}} %</td>
+          <td>{{item?.productDiscountPrice}}</td>
+          <td>{{item?.quantity}}</td>
+          <td>{{item?.quantity * item?.productDiscountPrice }}</td>
+          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i></td>
+        </tr>
+        
+        </tbody>
+  </table>
+</div>

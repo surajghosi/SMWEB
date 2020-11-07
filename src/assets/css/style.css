@@ -220,7 +220,7 @@ ul{
 **  Start of Main Section  **
 ******************************/
 .container-fluid{
-    margin: 30px 0;
+    /* margin: 30px 0; */
     padding: 0 16px;
 }
 #filter-badge-section{
@@ -275,7 +275,7 @@ ul{
 **  Start of Project Cards Section  **
 ******************************/
 #project-card-section{
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: -10px;
     margin-right: -10px;
 }
@@ -317,6 +317,7 @@ ul{
 }
 .project-card .card-body-content{
     min-width: 18rem;
+    margin-left: -5px;
 }
 
 .project-card-title .card-title{

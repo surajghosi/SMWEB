@@ -1,0 +1,29 @@
+<form class="clearfix" (ngSubmit)="f.valid && addZone(f,f.submitted)" #f="ngForm" novalidate>  
+  <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !areaName.valid }">
+    <label for="txtZone">Zone</label>
+    <textarea type="text" class="form-control" name="areaName" rows="3" id="txtZone" placeholder="Zone" [(ngModel)]="model.areaName" #areaName="ngModel" required></textarea>
+    <div *ngIf="f.submitted && !areaName.valid" class="help-block">Zone is required</div>
+   
+  </div>
+  <button [disabled]="isSaving" class="btn btn-primary float-right mb-1">
+    <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+    Submit
+    </button>
+    
+</form>
+<div class="col-md-12 mt-2 table-responsive" *ngIf="allZoneList.length>0">
+  <table class="table  table-bordered mttable">
+    <thead>
+      <tr>
+        <th>Zone</th>
+        <th></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr  *ngFor="let item of allZoneList">
+          <td>{{item?.areaName}}</td>
+          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i></td>
+        </tr>
+        </tbody>
+        </table>
+</div>

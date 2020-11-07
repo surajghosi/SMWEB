@@ -1,0 +1,89 @@
+<form (ngSubmit)="f.valid && addContact(f,f.submitted)" #f="ngForm" novalidate>
+  <div class="form-row">
+      <!-- <div class="form-group col-md-6">
+        <label for="leadinfo">Lead Info</label>
+        <input type="email" class="form-control" id="leadinfo" placeholder="Give your Lead a title">
+      </div> -->
+      <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !contactName.valid }">
+        <label for="txtContactName">Contact Name</label>
+        <input type="text" class="form-control" name="contactName" id="txtContactName" placeholder="Contact Name" [(ngModel)]="model.contactName" #contactName="ngModel" required>
+        <div *ngIf="f.submitted && !contactName.valid" class="help-block">Contact Name is required</div>
+      </div>
+     
+      <div class="form-group col-md-6" >
+        <label for="txtContactDesignation">Contact Designation</label>
+        <input type="text" class="form-control" name="contactDesignation" id="txtContactDesignation" placeholder="Contact Designation" [(ngModel)]="model.contactDesignation" #contactDesignation="ngModel">
+        
+      </div>
+      <div class="form-group col-md-6" [ngClass]="{ 'has-error': contactEmail.errors &&(contactEmail.touched || contactEmail.dirty) }"  >
+        <label for="txtContactEmail">Contact Email</label>
+        <input type="text" class="form-control" name="contactEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="txtContactEmail" placeholder="Contact Email" [(ngModel)]="model.contactEmail" #contactEmail="ngModel" email>
+        <div *ngIf="contactEmail.errors &&(contactEmail.touched || contactEmail.dirty)" class="help-block">
+         
+            Contact Name is required
+         
+          </div>
+      </div>
+      <div class="form-group col-md-6" >
+        <label for="txtContactPhone">Contact Phone</label>
+        <input type="text" class="form-control" name="contactPhone" maxlength="12" id="txtContactPhone" placeholder="Contact Phone" [(ngModel)]="model.contactPhone" #contactPhone="ngModel">
+        
+      </div>
+      <div class="form-group col-md-6">
+        <label for="txtContactOrgnization">Contact Orgnization</label>
+        <input type="text" class="form-control" name="contactPhone" id="txtContactOrgnization" placeholder="Contact Orgnization" [(ngModel)]="model.contactOrg" #contactOrg="ngModel">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="txtContactAddress">Contact Address</label>
+        <textarea type="text" class="form-control" name="contactPhone" id="txtContactAddress" placeholder="Contact Address" [(ngModel)]="model.contactAddress" #contactAddress="ngModel"></textarea>
+      </div>
+      
+       
+       
+
+       
+       
+        
+        <div class="col-md-6"></div>
+
+</div>
+<div class="row">
+<div class="col-1" >
+<button [disabled]="isSaving" class="btn btn-primary">
+<span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+Submit
+</button>
+</div>
+<div class="col-1">
+<input type="reset"  class="btn btn-primary" value="Reset">
+</div>
+</div>
+
+</form>
+<div class="col-md-12 mt-2 table-responsive" *ngIf="allContactList.length>0">
+  <table class="table  table-bordered mttable">
+    <thead>
+      <tr>
+        <th>Contact Name</th>
+        <th>Contact Designation</th>
+        <th>Contact Email</th>
+        <th>Contact Phone</th>
+        <th>Contact Address</th>
+        <th>Contact Org</th>
+        <th></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr  *ngFor="let item of allContactList">
+          <td>{{item?.contactName}}</td>
+          <td>{{item?.contactDesignation}}</td>
+          <td>{{item?.contactEmail}}  </td>
+          <td>{{item?.contactPhone}}</td>
+          <td>{{item?.contactAddress}}</td>
+          <td>{{item?.contactOrg}}</td>
+          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i></td>
+        </tr>
+        
+        </tbody>
+        </table>
+</div>

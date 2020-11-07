@@ -11,7 +11,7 @@
           <a class="navbar-brand logo-brand hide" href="#!">TMS</a>
           <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                  <a class="nav-link" href="#!">Pipline <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" routerLink="/Home">Dashbord <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Todos</a>
@@ -82,12 +82,12 @@
                       <a [routerLink]="['/settings']"  class="nav-link" >Setting</a>
                   </li>
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Revant G</a>
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{profileName}}</a>
                       <div class="dropdown-menu user-profile">
-                          <a class="dropdown-item" href="#!">Add Team Members</a>
-                          <a class="dropdown-item" href="#!">Help Center</a>
-                          <a class="dropdown-item" href="#!">Change Password</a>
-                          <a class="dropdown-item" href="#!">Sign Out</a>
+                          <a class="dropdown-item" [routerLink]="['/settings']" >Add Team Members</a>
+                          <a class="dropdown-item" [routerLink]="['/helpCenter']">Help Center</a>
+                          <a class="dropdown-item" [routerLink]="['/changePassword']" >Change Password</a>
+                          <a class="dropdown-item" [routerLink]="['/Login']"  >Sign Out</a>
                       </div>
                   </li>
                   <li class="nav-item dropdown mobile-notification show">
