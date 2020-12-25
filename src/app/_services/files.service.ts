@@ -13,5 +13,8 @@ export class FilesService {
   deleteFile(filesUpload: FilesUpload) {
     return this.http.post(`${environment.APIUrl}Files/DeleteFile`, filesUpload);
   }
+  getFileDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}Files/AllFiles?leadId=${leadId}`);
+  }
 }
 

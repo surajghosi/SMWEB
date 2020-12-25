@@ -13,11 +13,15 @@ export class NotesComponent implements OnInit {
   public isSaving = false;
   allNotesList: any  = [] ;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() notesCount = new EventEmitter<string>();
   constructor(private notesService: NotesService,
               private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
+    if(this.leadDetailsMode) {
+      this.getAllNotesByleadId(this.leadId);
+    }
   }
 
   addNotes(f: NgForm) {
@@ -60,5 +64,14 @@ export class NotesComponent implements OnInit {
                   this.isSaving = false;
                });
         this.notesCount.emit(this.allNotesList.length);
+      }
+      getAllNotesByleadId(leadId: any) {
+        this.notesService.getNotesDetailsByLeadId(leadId).pipe().subscribe(
+               (data: any ) => {
+                   this.allNotesList = data.data;
+               },
+                error => {
+                  this.isSaving = false;
+               });
       }
 }

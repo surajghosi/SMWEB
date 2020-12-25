@@ -14,11 +14,15 @@ export class ZonesComponent implements OnInit {
   public isSaving = false;
   allZoneList: any  = [] ;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() zoneCount = new EventEmitter<string>();
   constructor(private zonesService: ZonesService,
               private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
+    if(this.leadDetailsMode) {
+      this.getAllZoneByleadId(this.leadId);
+    }
   }
 
   addZone(f: NgForm) {
@@ -61,6 +65,15 @@ export class ZonesComponent implements OnInit {
                   this.isSaving = false;
                });
         this.zoneCount.emit(this.allZoneList.length);
+      }
+      getAllZoneByleadId(leadId: any) {
+        this.zonesService.getZoneDetailsByLeadId(leadId).pipe().subscribe(
+               (data: any ) => {
+                   this.allZoneList = data.data;
+               },
+                error => {
+                  this.isSaving = false;
+               });
       }
 
 }

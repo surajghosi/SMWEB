@@ -39,8 +39,10 @@
     </thead>
       <tbody>
         <tr  *ngFor="let item of allfilesList">
-          <td>{{item?.fileName}}</td>
-          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i></td>
+          <td>{{item?.fileName}} <a href="./{{item?.filePath}}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Download file"><i class="fa fa-download"  aria-hidden="true"></i></a></td>
+          <td><i class="fa fa-trash-o" style="cursor: pointer;" (click)="showDialog(item)"  aria-hidden="true"></i>
+             
+          </td>
         </tr>
         
         </tbody>

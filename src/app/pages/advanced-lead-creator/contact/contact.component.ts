@@ -13,11 +13,15 @@ export class ContactComponent implements OnInit {
   public isSaving = false;
   allContactList: any  = [] ;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() contactCount = new EventEmitter<string>();
   constructor(private contactService: ContactService,
               private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
+    if(this.leadDetailsMode) {
+      this.getAllContactByleadId(this.leadId);
+    }
   }
  
   addContact(f: NgForm) {
@@ -67,4 +71,14 @@ export class ContactComponent implements OnInit {
         this.contactCount.emit(this.allContactList.length);
       }
 
+      getAllContactByleadId(leadId: any) {
+        this.contactService.getContactDetailsByLeadId(leadId).pipe().subscribe(
+               (data: any ) => {
+                   this.allContactList = data.data;
+               },
+                error => {
+                  this.isSaving = false;
+               });
+
+      }
 }

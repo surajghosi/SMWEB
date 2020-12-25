@@ -23,12 +23,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { ConfirmationComponent, ConfirmDialogService } from './_commonComponent/confirmation/index';
+import { CommonpopupService  } from './_commonComponent/commonpopup/commonpopup.service';
 import { BlockUIModule } from 'ng-block-ui';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { LeadDetailsComponent } from './pages/advanced-lead-creator/lead-details/lead-details.component';
+import { CommonpopupComponent  } from './_commonComponent/commonpopup/commonpopup.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -79,12 +81,14 @@ import { LeadDetailsComponent } from './pages/advanced-lead-creator/lead-details
         NotesComponent,
         ManageAccessComponent,
         ZonesComponent,
-        LeadDetailsComponent],
+        LeadDetailsComponent,
+        CommonpopupComponent],
     providers: [
         AuthGuard,
         AlertService,
         ConfirmDialogService,
         AuthenticationService,
+        CommonpopupService,
         UserService,
         {
             provide: HTTP_INTERCEPTORS,

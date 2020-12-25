@@ -16,23 +16,21 @@
                 
                     <div class="row leaddetailsoption">
                       <div class="col-sm">
-                        <i class="fa fa-pencil-square-o"></i>   <a  href="javascript:void(0)" id="list-home-list">Edit Lead Name</a>    
+                        <i class="fa fa-pencil-square-o"></i>   <a  href="javascript:void(0)" (click)="setTemplate(1)"  data-toggle="modal" data-target="#commonModel" id="list-home-list">Edit Lead Name</a> 
                       </div>
                       <div class="col-sm">
                         <i class="fa fa-thumbs-up"></i> / <i class="fa fa-thumbs-down"></i>
-                             <a  href="javascript:void(0)" id="list-home-list">Mark as won / lost</a>    
+                             <a  href="javascript:void(0)" data-toggle="modal" data-target="#commonModel" (click)="setTemplate(2)" id="list-home-list">Mark as won / lost</a>    
                       </div>
                       <div class="col-sm">
-                        <i class="fa fa-times"></i>   <a  href="javascript:void(0)" id="list-home-list">Delete</a>    
+                        <i class="fa fa-times"></i>   <a  href="javascript:void(0)" (click)="setTemplate(0)" id="list-home-list">Delete</a>    
                       </div>
                       <div class="col-sm">
-                        <i class="fa fa-bars"></i>   <a  href="javascript:void(0)" id="list-home-list">Change Pipeline</a>    
+                        <i class="fa fa-retweet"></i>   <a  href="javascript:void(0)" data-toggle="modal" data-target="#commonModel"  (click)="setTemplate(3)" id="list-home-list">Change Pipeline / Change Stage</a>    
                       </div>
-                      <div class="col-sm">
-                        <i class="fa fa-retweet"></i>   <a  href="javascript:void(0)" id="list-home-list">Change Stage</a>    
-                      </div>
-                     
-                      
+                      <!-- <div class="col-sm">
+                        <i class="fa fa-retweet"></i>   <a  href="javascript:void(0)" (click)="setTemplate(5)" id="list-home-list">Change Stage</a>    
+                      </div> --> 
                     </div>
                   
 
@@ -43,14 +41,14 @@
                 <div class="row">
                     <div class="col-2">
                       <div class="list-group" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><i class="fa fa-tasks mr-1" aria-hidden="true"></i>Todo</a>
-                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="fa fa-user mr-1" aria-hidden="true"></i>Contact</a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><i class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Notes</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Files</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-briefcase mr-1" aria-hidden="true"></i>Product</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-soundcloud mr-1" aria-hidden="true"></i>Sources</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Zones</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fa fa-key mr-1" aria-hidden="true"></i>Manage Access</a>
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-todo" role="tab" aria-controls="home"><i class="fa fa-tasks mr-1" aria-hidden="true"></i>Todo</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-contact" role="tab" aria-controls="profile"><i class="fa fa-user mr-1" aria-hidden="true"></i>Contact</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-notes" role="tab" aria-controls="messages"><i class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Notes</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-files" role="tab" aria-controls="settings"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Files</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-product" role="tab" aria-controls="settings"><i class="fa fa-briefcase mr-1" aria-hidden="true"></i>Product</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-source" role="tab" aria-controls="settings"><i class="fa fa-soundcloud mr-1" aria-hidden="true"></i>Sources</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-zone" role="tab" aria-controls="settings"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Zones</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-leadaccess" role="tab" aria-controls="settings"><i class="fa fa-key mr-1" aria-hidden="true"></i>Manage Access</a>
                         <a style="text-align: center;" class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
                           Lead Value
                           <h4 >
@@ -60,14 +58,33 @@
                     </div>
                     <div class="col-10" style="border: 2px solid gray;">
                       <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                        <div class="tab-pane fade show active" id="list-todo" role="tabpanel" aria-labelledby="list-home-list">
                             <app-todo [leadDetailsMode]=true  [leadId]=parentLeadId></app-todo>
                         </div>
-                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                          <app-contact  [leadId]=parentLeadId></app-contact>
+                        <div class="tab-pane fade" id="list-contact" role="tabpanel" aria-labelledby="list-profile-list">
+                          <app-contact [leadDetailsMode]=true  [leadId]=parentLeadId></app-contact>
                         </div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+                        <div class="tab-pane fade" id="list-notes" role="tabpanel" aria-labelledby="list-messages-list">
+                          <app-notes [leadDetailsMode]=true  [leadId]=parentLeadId></app-notes>
+                        </div>
+                        <div class="tab-pane fade" id="list-files" role="tabpanel" aria-labelledby="list-settings-list">
+                          <app-files [leadDetailsMode]=true  [leadId]=parentLeadId></app-files>
+                        </div>
+                        <div class="tab-pane fade" id="list-product" role="tabpanel" aria-labelledby="list-settings-list">
+                          <app-product [leadDetailsMode]=true  [leadId]=parentLeadId></app-product>
+                        </div>
+                        <div class="tab-pane fade" id="list-zone" role="tabpanel" aria-labelledby="list-settings-list">
+                          <app-zones [leadDetailsMode]=true  [leadId]=parentLeadId></app-zones>
+                        </div>
+                        <div class="tab-pane fade" id="list-leadaccess" role="tabpanel" aria-labelledby="list-settings-list">
+                          <app-manage-access [leadDetailsMode]=true  [leadId]=parentLeadId></app-manage-access>
+                        </div>
+                        <div class="tab-pane fade" id="list-source" role="tabpanel" aria-labelledby="list-settings-list">
+                          <app-source [leadDetailsMode]=true  [leadId]=parentLeadId></app-source>
+                        </div>
+
+                        
+
                       </div>
                     </div>
                   </div>
@@ -76,4 +93,96 @@
           </div>
     </div>
 
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade"  id="commonModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="clearfix" *ngIf="templateType==1"  (ngSubmit)="f.valid && changeLeadName(f,f.submitted)" #f="ngForm" novalidate>  
+          <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !leadName.valid }">
+            <label for="txtNotes">Lead Name</label>
+            <input type="text" class="form-control" name="leadName" rows="3" id="txtNotes" placeholder="Source" [(ngModel)]="model.leadName" #leadName="ngModel" required>
+            <div *ngIf="f.submitted && !leadName.valid" class="help-block">Lead name is required</div>
+           
+          </div>
+          <button [disabled]="isSaving" class="btn btn-primary float-right mb-1">
+            <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+            Submit
+            </button>
+            
+        </form>
+        <form class="clearfix" *ngIf="templateType==2"  (ngSubmit)="f.valid && wonLost(f,f.submitted)" #f="ngForm" novalidate>  
+         <div class="row">
+          <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !wonlostoption.valid }">
+            <label for="inputEmail4">Role</label>
+            <select id="ddlwonlostoption"  [(ngModel)]="model.wonlostoption" name="wonlostoption" #wonlostoption="ngModel" class="form-control" required>
+              <option value=""> Please choose one </option>
+              <option value="Won" >Won</option>
+              <option value="Lost" >Lost</option>
+            </select>
+            <div *ngIf="f.submitted && !wonlostoption.valid" class="help-block">Select role</div>
+            
+          </div>
+         
+          <div class="form-group  col-md-6" [ngClass]="{ 'has-error': f.submitted && !wonlostreason.valid }">
+            <label for="txtNotes">Reason</label>
+            <input type="text" class="form-control" name="wonlostreason" rows="3" id="txtNotes" placeholder="Reason" [(ngModel)]="model.wonlostreason" #wonlostreason="ngModel" required>
+            <div *ngIf="f.submitted && !wonlostreason.valid" class="help-block">Reason is required</div>
+           
+          </div>
+        </div>
+          <button [disabled]="isSaving" class="btn btn-primary float-right mb-1">
+            <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+            Submit
+            </button>
+            
+        </form>
+       
+         <form class="clearfix" *ngIf="templateType==3"  (ngSubmit)="f.valid && changePipeStage(f,f.submitted)" #f="ngForm" novalidate>  
+          <div class="row">
+           <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && pipeLineId.valid }">
+             <label for="inputEmail4">Pipeline</label>
+             <select id="ddlpipeLine"  [(ngModel)]="model.pipeLineId" name="pipeLineId" #pipeLineId="ngModel" class="form-control" required>
+               <option value=""> Please choose one </option>
+               <option value="Won" >Won</option>
+               <option value="Lost" >Lost</option>
+             </select>
+             <div *ngIf="f.submitted && !pipeLineId.valid" class="help-block">Select Pipeline</div>
+             
+           </div>
+           <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && stageId.valid }">
+            <label for="inputEmail4"> Stage</label>
+            <select id="ddlpipeLine"  [(ngModel)]="model.stageId" name="stageId" #stageId="ngModel" class="form-control" required>
+              <option value=""> Please choose one </option>
+              <option value="Won" >Won</option>
+              <option value="Lost" >Lost</option>
+            </select>
+            <div *ngIf="f.submitted && !stageId.valid" class="help-block">Select Stage</div>
+            
+          </div>
+         </div>
+           <button [disabled]="isSaving" class="btn btn-primary float-right mb-1">
+             <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+             Submit
+             </button>
+             
+         </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
 </div>

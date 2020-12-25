@@ -14,5 +14,8 @@ export class ContactService {
   deleteContact(contactDetails: ContactModel) {
     return this.http.post(`${environment.APIUrl}Contact/DeleteContact`, contactDetails);
   }
+  getContactDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}Contact/AllContact?leadId=${leadId}`);
+  }
 
 }

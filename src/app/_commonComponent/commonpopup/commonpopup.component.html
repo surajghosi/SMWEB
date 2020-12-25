@@ -1,0 +1,53 @@
+<div *ngIf="templateType" >
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  style="display:block!important" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{modelTitle}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="close()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="submit()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> 
+
+
+<!-- 
+<form  class="clearfix" (ngSubmit)="f.valid && addProduct(f,f.submitted)" #f="ngForm" novalidate>  
+  <div class="form-group">
+
+    <div class="form-row">
+    <div class="form-group col-md-6" [ngClass]="{ 'has-error': f.submitted && !productName.valid }">
+      <label for="txtProductName">Product Name</label>
+      <input type="text" class="form-control" name="productName" id="txtProductName" maxlength="600" placeholder="Product Name" [(ngModel)]="model.productName" #productName="ngModel" required>
+      <div *ngIf="f.submitted && !productName.valid" class="help-block">Product Name is required</div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-1" >
+    <button [disabled]="isSaving" class="btn btn-primary">
+    <span *ngIf="isSaving" class="spinner-border spinner-border-sm"  role="status" aria-hidden="true"></span>
+    Submit
+    </button>
+    </div>
+    <div class="col-1">
+    <input type="reset"   class="btn btn-primary" value="Reset">
+    </div>
+    </div>
+</div>
+</form> -->
+
+
+
+<div *ngIf="templateType==2">
+  Template 2
+</div>

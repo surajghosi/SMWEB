@@ -15,4 +15,7 @@ export class SourceService {
   deleteSource(sourceDetails: Source) {
     return this.http.post(`${environment.APIUrl}Source/DeleteSource`, sourceDetails);
   }
+  getSourceDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}Source/AllSource?leadId=${leadId}`);
+  }
 }

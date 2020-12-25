@@ -15,4 +15,7 @@ export class ManageleadaccessService {
   deleteLeadAccess(accessDetails: ManageLeadAccess) {
     return this.http.post(`${environment.APIUrl}LeadAccess/DeleteLeadAccess`, accessDetails);
   }
+  getLeadAccessDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}LeadAccess/AllLeadAccess?leadId=${leadId}`);
+  }
 }

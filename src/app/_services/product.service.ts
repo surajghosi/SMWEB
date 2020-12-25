@@ -15,4 +15,7 @@ export class ProductService {
   deleteProduct(productDetails: Product) {
     return this.http.post(`${environment.APIUrl}Product/DeleteProduct`, productDetails);
   }
+  getProductDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}Product/AllProduct?leadId=${leadId}`);
+  }
 }

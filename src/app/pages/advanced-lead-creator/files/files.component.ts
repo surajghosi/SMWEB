@@ -13,12 +13,17 @@ export class FilesComponent implements OnInit {
   allfilesList: any  = [] ;
   public progress: number;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() fileCount = new EventEmitter<string>();
   constructor(private filesService: FilesService,
               private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
+    if(this.leadDetailsMode) {
+      this.getAllFilesByleadId(this.leadId);
+    }
   }
+  
 
   upload(files) {
     this.isSaving = true;
@@ -54,14 +59,14 @@ export class FilesComponent implements OnInit {
 
   showDialog(item) {
     this.confirmDialogService.confirmThis('Are you sure to delete?', () => {
-      this.deleteContact(item);
+      this.deleteFiles(item);
     }, () => {
     });
   }
 
-  deleteContact(contactItem: any) {
-    this.allfilesList = this.allfilesList.filter(obj => obj !== contactItem);
-    this.filesService.deleteFile(contactItem).pipe(
+  deleteFiles(fileItem: any) {
+    this.allfilesList = this.allfilesList.filter(obj => obj !== fileItem);
+    this.filesService.deleteFile(fileItem).pipe(
       finalize(() => this.isSaving = false),
       ).subscribe(
            (data: any ) => {
@@ -70,6 +75,16 @@ export class FilesComponent implements OnInit {
               this.isSaving = false;
            });
     this.fileCount.emit(this.allfilesList.length);
+  }
+  getAllFilesByleadId(leadId: any) {
+    this.filesService.getFileDetailsByLeadId(leadId).pipe().subscribe(
+           (data: any ) => {
+               this.allfilesList = data.data;
+           },
+            error => {
+              this.isSaving = false;
+           });
+
   }
 
 }

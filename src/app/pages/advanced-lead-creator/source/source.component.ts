@@ -14,11 +14,15 @@ export class SourceComponent implements OnInit {
   public isSaving = false;
   allSourceList: any  = [] ;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() sourceCount = new EventEmitter<string>();
   constructor(private sourceService: SourceService,
               private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
+    if(this.leadDetailsMode) {
+      this.getAllSourceByleadId(this.leadId);
+    }
   }
 
   addSource(f: NgForm) {
@@ -61,6 +65,15 @@ export class SourceComponent implements OnInit {
                   this.isSaving = false;
                });
         this.sourceCount.emit(this.allSourceList.length);
+      }
+      getAllSourceByleadId(leadId: any) {
+        this.sourceService.getSourceDetailsByLeadId(leadId).pipe().subscribe(
+               (data: any ) => {
+                   this.allSourceList = data.data;
+               },
+                error => {
+                  this.isSaving = false;
+               });
       }
 
 }

@@ -15,4 +15,7 @@ export class ZonesService {
   deleteZone(zoneDetails: Zone) {
     return this.http.post(`${environment.APIUrl}Zone/DeleteZone`, zoneDetails);
   }
+  getZoneDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}Zone/AllZone?leadId=${leadId}`);
+  }
 }

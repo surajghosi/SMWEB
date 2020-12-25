@@ -15,4 +15,7 @@ export class NotesService {
   deleteNotes(notesDetails: Notes) {
     return this.http.post(`${environment.APIUrl}Notes/DeleteNotes`, notesDetails);
   }
+  getNotesDetailsByLeadId(leadId) {
+    return this.http.get(`${environment.APIUrl}Notes/AllNotes?leadId=${leadId}`);
+  }
 }

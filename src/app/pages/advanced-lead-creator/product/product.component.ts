@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
   public isSaving = false;
   allProductsList: any  = [] ;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() productCount = new EventEmitter<string>();
   
   constructor(private productService: ProductService,
@@ -21,6 +22,9 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.model.discountPercentage = 0;
     this.model.quantity = 1;
+    if(this.leadDetailsMode) {
+      this.getAllProductByleadId(this.leadId);
+    }
   }
 
   addProduct(f: NgForm) {
@@ -80,7 +84,6 @@ export class ProductComponent implements OnInit {
       }
 
       onDiscountChange(percent: number) {
-        debugger;
         if(this.model.discountPercentage ==='' || this.model.discountPercentage ===undefined ) {
           this.model.discountPercentage = 0 ;
         }
@@ -94,6 +97,16 @@ export class ProductComponent implements OnInit {
         if(quantity < 1)  {
           this.model.quantity = 1 ;
         }
+      }
+
+      getAllProductByleadId(leadId: any) {
+        this.productService.getProductDetailsByLeadId(leadId).pipe().subscribe(
+               (data: any ) => {
+                   this.allProductsList = data.data;
+               },
+                error => {
+                  this.isSaving = false;
+               });
       }
 }
 

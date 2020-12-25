@@ -26,6 +26,7 @@ export class ManageAccessComponent implements OnInit {
   public isSaving = false;
   allManageAccessList: any  = [] ;
   @Input() leadId: string;
+  @Input() leadDetailsMode = false;
   @Output() accessCount = new EventEmitter<string>();
   constructor(private manageleadaccessService: ManageleadaccessService,
               private userManagementService: UserManagementService,
@@ -33,6 +34,9 @@ export class ManageAccessComponent implements OnInit {
 
   ngOnInit() {
     this.getAllUser();
+    if(this.leadDetailsMode) {
+      this.getAllLeadAccessByleadId(this.leadId);
+    }
   }
 
   selectEvent(item) {
@@ -86,7 +90,7 @@ export class ManageAccessComponent implements OnInit {
         this.confirmDialogService.confirmThis('Are you sure to delete?', () => {
           this.deleteLeadAccess(item);
         }, () => {
-        }); 
+        });
       }
 
       deleteLeadAccess(manageLeadAccessItem: any) {
@@ -100,5 +104,14 @@ export class ManageAccessComponent implements OnInit {
                   this.isSaving = false;
                });
         this.accessCount.emit(this.allManageAccessList.length);
+      }
+      getAllLeadAccessByleadId(leadId: any) {
+        this.manageleadaccessService.getLeadAccessDetailsByLeadId(leadId).pipe().subscribe(
+               (data: any ) => {
+                   this.allManageAccessList = data.data;
+               },
+                error => {
+                  this.isSaving = false;
+               });
       }
 }
