@@ -56,10 +56,18 @@ export class DashboardComponent implements OnInit {
       ).subscribe(
         (data: any) => {
             this.allPipeLine = data.data;
-            const result =  this.allPipeLine.filter(el => el.isDefault === true);
-            this.getLeadListView(result[0].pipeID);
-            this.filter.pipeId = result[0].pipeID;
-            this.defaultPipeId = result[0].pipeID;
+            if(this.allPipeLine.length > 0) {
+              const result =  this.allPipeLine.filter(el => el.isDefault === true);
+              if(result.length > 0) {
+                this.getLeadListView(result[0].pipeID);
+                this.filter.pipeId = result[0].pipeID;
+                this.defaultPipeId = result[0].pipeID;
+              } else {
+                this.loading = false;
+              }
+            } else {
+              this.loading = false;
+            }
            },
             error => {
    });
@@ -83,6 +91,9 @@ export class DashboardComponent implements OnInit {
             this.totalLeadCount();
             localStorage.setItem('leadData', JSON.stringify(data.data));
             this.cardHeight = $(".cdk-drop-list").height();
+            if(this.cardHeight < 100) {
+              this.cardHeight=200;
+            }
             // tslint:disable-next-line:only-arrow-functions
             $(function() {
               $('[data-toggle="tooltip"]').tooltip();
@@ -143,6 +154,9 @@ movedLeads(stid: any, ledid: any) {
          });
 
  this.cardHeight = $('.cdk-drop-list').height();
+ if(this.cardHeight < 100) {
+  this.cardHeight = 200;
+}
 }
 getAllUser() {
 
