@@ -1,4 +1,4 @@
-<form class="clearfix" (ngSubmit)="f.valid && addNotes(f,f.submitted)" #f="ngForm" novalidate>  
+<form class="clearfix" (ngSubmit)="f.valid && addNotes(f)" #f="ngForm" novalidate>  
   <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !notes.valid }">
     <label for="txtNotes">Add Notes</label>
     <textarea type="text" class="form-control" name="notes" rows="3" id="txtNotes" placeholder="Notes" [(ngModel)]="model.notes" #notes="ngModel" required></textarea>

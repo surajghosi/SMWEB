@@ -149,12 +149,12 @@
 
                                       </h4>
                                       <a class="nav-link dropdown-toggle leadoption p-0 float-right d-inline-block" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-                                      <div class="dropdown-menu">
+                                      <!-- <div class="dropdown-menu">
                                           <a class="dropdown-item" href="#!">Add Team Members</a>
                                           <a class="dropdown-item" href="#!">Help Center</a>
                                           <a class="dropdown-item" href="#!">Change Password</a>
                                           <a class="dropdown-item" href="#!">Sign Out</a>
-                                      </div>
+                                      </div> -->
                                   </div>
                                 
                                       
@@ -163,13 +163,13 @@
                                   [cdkDropListConnectedTo]="trackIds" (cdkDropListDropped)="onTalkDrop($event)">
                                   <div class="project-todo" *ngFor="let leaddata of item.leadDetails" cdkDrag  [routerLink]="['/LeadDetails', leaddata.leadId]">
                                     <div class="card border-light mb-3">
-                                        <div class="card-body ">
-                                            <!-- <div class="color-tags">
-                                                <p class="color green"></p>
+                                        <div class="card-body  leaddetailsarea">
+                                            <div class="color-tags">
+                                                <p class="color green" style="color:red !important"></p>
                                                 <p class="color orange"></p>
                                                 <p class="color purple"></p>
                                                 <p class="color green"></p>
-                                            </div> -->
+                                            </div>
                                             <div class="todo-title">
                                                 <p class="font-weight-normal d-inline-block">{{leaddata?.leadName}}</p>
                                                

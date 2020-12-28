@@ -91,9 +91,9 @@ export class DashboardComponent implements OnInit {
             this.totalLeadCount();
             localStorage.setItem('leadData', JSON.stringify(data.data));
             this.cardHeight = $(".cdk-drop-list").height();
-            if(this.cardHeight < 100) {
-              this.cardHeight=200;
-            }
+            // if(this.cardHeight < 100) {
+            //   this.cardHeight=200;
+            // }
             // tslint:disable-next-line:only-arrow-functions
             $(function() {
               $('[data-toggle="tooltip"]').tooltip();
@@ -207,6 +207,10 @@ filterLeads() {
     });
    }
   this.totalLeadCount();
+  //this.cardHeight = $(".cdk-drop-list").height();
+  // if(this.cardHeight < 100){
+  //   this.cardHeight=600;
+  // }
 }
 
 resetFilter() {

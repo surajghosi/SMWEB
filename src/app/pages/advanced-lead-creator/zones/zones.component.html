@@ -1,4 +1,4 @@
-<form class="clearfix" (ngSubmit)="f.valid && addZone(f,f.submitted)" #f="ngForm" novalidate>  
+<form class="clearfix" (ngSubmit)="f.valid && addZone(f)" #f="ngForm" novalidate>  
   <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !areaName.valid }">
     <label for="txtZone">Zone</label>
     <textarea type="text" class="form-control" name="areaName" rows="3" id="txtZone" placeholder="Zone" [(ngModel)]="model.areaName" #areaName="ngModel" required></textarea>

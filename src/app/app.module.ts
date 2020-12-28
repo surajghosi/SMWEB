@@ -17,7 +17,7 @@ import { HomeComponent , SettingsComponent,
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { HeaderComponent , FooterComponent , BlockTemplateComponent } from './_commonComponent/index';
-import { ContextmenuModule } from 'ng2-contextmenu';  // we are not using
+//import { ContextmenuModule } from 'ng2-contextmenu';  // we are not using
 import {ShContextMenuModule} from 'ng2-right-click-menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -38,7 +38,7 @@ import { CommonpopupComponent  } from './_commonComponent/commonpopup/commonpopu
         FormsModule,
         HttpClientModule,
         routing,
-        ContextmenuModule,
+       // ContextmenuModule,
         ShContextMenuModule,
         BrowserAnimationsModule,
         ToastrModule.forRoot(),

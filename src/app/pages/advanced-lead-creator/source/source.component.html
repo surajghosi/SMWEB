@@ -1,4 +1,4 @@
-<form class="clearfix" (ngSubmit)="f.valid && addSource(f,f.submitted)" #f="ngForm" novalidate>  
+<form class="clearfix" (ngSubmit)="f.valid && addSource(f)" #f="ngForm" novalidate>  
   <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !sourceName.valid }">
     <label for="txtNotes">Source</label>
     <textarea type="text" class="form-control" name="sourceName" rows="3" id="txtNotes" placeholder="Source" [(ngModel)]="model.sourceName" #sourceName="ngModel" required></textarea>
